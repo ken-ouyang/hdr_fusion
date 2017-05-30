@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( hdrFusion )
+find_package( OpenCV REQUIRED )
+add_executable( hdrFusion main.cpp hdrFusion.cpp guided_filter.cpp)
+target_link_libraries(hdrFusion libopencv_core.so)
+target_link_libraries(hdrFusion libopencv_highgui.so libopencv_imgproc.so)
